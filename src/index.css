@@ -1,0 +1,17 @@
+html,
+body,
+#root,
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #B5B2C2;
+}
+
+body,
+#root,
+.App {
+  display: flex;
+  flex-flow: column;
+}
