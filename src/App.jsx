@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
-import Display from './container/Display'
+import Display from './components/Display'
 import './App.css'
+import ButtonContainer from './components/ButtonContainer'
 
 function App() {
 
@@ -10,6 +10,7 @@ function App() {
       <Container className='calculator'>
         <h1 className='title'>ReCALC</h1>
         <Display />
+        <ButtonContainer />
       </Container>
     </Container>
   )

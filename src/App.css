@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90vw;
+  width: 95vw;
   max-width: 600px;
   height: 90vh;
   background-color: #232C33;
@@ -17,8 +17,43 @@
 }
 
 .display {
-  width: 90%;
+  width: 95%;
+  max-width: 500px;
   height: 70px;
   background-color: #DADFF7;
   border-radius: 25px;
+}
+
+.buttonContainer {
+  width: 95%;
+  max-width: 500px;
+  height: 70%;
+  background-color: #A0C1D1;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.btn {
+  width: 95%;
+  height: 10vh;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  justify-content: center;
+  margin: auto;
+}
+
+.col-6,
+.col {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 5px auto;
 }
