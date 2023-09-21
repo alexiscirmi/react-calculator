@@ -1,7 +1,7 @@
+import ButtonContainer from './components/ButtonContainer'
 import Container from 'react-bootstrap/Container'
 import Display from './components/Display'
 import './App.css'
-import ButtonContainer from './components/ButtonContainer'
 
 function App() {
 

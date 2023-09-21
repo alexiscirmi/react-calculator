@@ -1,13 +1,14 @@
 import { Container } from 'react-bootstrap'
-import { useState } from 'react'
+import { useContext } from 'react'
+import { CalcContext } from './context/calcContext'
 
 function Display() {
 
-  // const [display, setDisplay] = useState()
+  const { display } = useContext(CalcContext)
 
   return (
     <Container className='display'>
-
+      <h1>{display}</h1>
     </Container>
   )
 }
