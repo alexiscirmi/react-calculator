@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "college";
+  src: local("college"),
+    url('./assets/fonts/college.ttf') format("truetype");
+}
+
 .calculator {
   display: flex;
   flex-direction: column;
@@ -5,13 +11,14 @@
   width: 95vw;
   max-width: 600px;
   height: 90vh;
-  background-color: #232C33;
+  background-color: #e4aa16;
   border-radius: 25px;
 }
 
 .title {
-  font-size: 32px;
-  color: #DADFF7;
+  font-family: 'college', sans-serif;
+  font-size: 48px;
+  color: #003391;
   margin-top: 0;
   padding-top: 10px;
 }
@@ -21,18 +28,21 @@
   max-width: 500px;
   height: 70px;
   background-color: #DADFF7;
+  border: 1px solid #02236d;
   border-radius: 25px;
   display: flex;
-  justify-content: end;
   align-items: center;
+  padding-left: 1.5rem;
   padding-right: 1.5rem;
+  overflow-x: scroll;
+  text-align: end;
 }
 
 .buttonContainer {
   width: 95%;
   max-width: 500px;
   height: 70%;
-  background-color: #A0C1D1;
+  background-color: #003391;
   border-radius: 25px;
   margin-top: 20px;
   margin-bottom: 20px;

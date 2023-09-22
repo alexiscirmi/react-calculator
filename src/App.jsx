@@ -8,7 +8,7 @@ function App() {
   return (
     <Container className='d-flex justify-content-center align-content-center my-auto'>
       <Container className='calculator'>
-        <h1 className='title'>ReCALC</h1>
+        <h1 className='title'>BOCALC</h1>
         <Display />
         <ButtonContainer />
       </Container>
