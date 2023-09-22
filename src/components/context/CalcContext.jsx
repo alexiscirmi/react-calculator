@@ -12,10 +12,20 @@ export const CalcContextComponent = ({ children }) => {
   }
 
   const equalClick = () => {
-    if (display.length > 0) {
-      setDisplay(evaluate(display).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 8 }))
+    try {
+      if (display.length > 0) {
+        setDisplay(evaluate(display.replaceAll(',', '')).toLocaleString('en-US', {
+          minimumFractionDigits: 2, maximumFractionDigits: 8
+        }))
+      }
+    } catch (error) {
+      setDisplay('SYNTAX ERROR')
+      setTimeout(() => {
+        setDisplay('')
+      }, 1500)
     }
   }
+
 
   const clearClick = () => {
     setDisplay('')
@@ -84,6 +94,9 @@ export const CalcContextComponent = ({ children }) => {
       case '%':
         opKey('%')
         break
+      case '.':
+        opKey('.')
+        break
       case '=':
         equalClick()
         break
@@ -109,5 +122,4 @@ export const CalcContextComponent = ({ children }) => {
       {children}
     </CalcContext.Provider>
   )
-
 }
