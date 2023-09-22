@@ -15,6 +15,7 @@ export default defineConfig({
         short_name: 'BOCALC',
         description: 'The calculator of the biggest football club',
         theme_color: '#ffffff',
+        start_url: '%PUBLIC_URL%/react-calculator/',
         icons: [
           {
             src: 'pwa-192x192.png',
