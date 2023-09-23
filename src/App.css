@@ -10,17 +10,9 @@
   align-items: center;
   width: 95vw;
   max-width: 600px;
-  height: 90vh;
+  height: 95vh;
   background-color: #e4aa16;
   border-radius: 25px;
-}
-
-.title {
-  font-family: 'college', sans-serif;
-  font-size: 48px;
-  color: #003391;
-  margin-top: 0;
-  padding-top: 10px;
 }
 
 .display {
@@ -31,6 +23,7 @@
   border: 1px solid #02236d;
   border-radius: 25px;
   display: flex;
+  justify-content: end;
   align-items: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -44,10 +37,31 @@
   height: 70%;
   background-color: #003391;
   border-radius: 25px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15 px;
   padding: 15px;
   text-align: center;
+}
+
+@media (max-width: 575px) {
+  .calculator {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .display,
+  .buttonContainer {
+    width: 100%;
+  }
+}
+
+.title {
+  font-family: 'college', sans-serif;
+  font-size: 48px;
+  color: #003391;
+  margin-top: 0;
+  padding-top: 10px;
 }
 
 .btn {

@@ -6,9 +6,9 @@ import './App.css'
 function App() {
 
   return (
-    <Container className='d-flex justify-content-center align-content-center my-auto'>
+    <Container className='d-flex justify-content-center align-items-center m-0 p-0 h-100' fluid>
       <Container className='calculator'>
-        <h1 className='title'>BOCALC</h1>
+        <h1 className='title mb-0'>BOCALC</h1>
         <Display />
         <ButtonContainer />
       </Container>
