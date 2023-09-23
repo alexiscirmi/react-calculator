@@ -1,6 +1,6 @@
 {
-    "name": "BOCALC",
-    "short_name": "BOCALC",
+    "name": "BoCALC",
+    "short_name": "BoCALC",
     "start_url": "./",
     "display": "standalone",
     "background_color": "#ffffff",

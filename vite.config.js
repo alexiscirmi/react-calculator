@@ -12,8 +12,8 @@ export default defineConfig({
       registerType: 'prompt',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'BOCALC',
-        short_name: 'BOCALC',
+        name: 'BoCALC',
+        short_name: 'BoCALC',
         description: 'The calculator of the biggest football club',
         theme_color: '#ffffff',
         start_url: './',
