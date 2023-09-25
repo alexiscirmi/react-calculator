@@ -123,9 +123,11 @@ export const CalcContextComponent = ({ children }) => {
           !focusDisplay && opKey(')')
           break
         case '=':
-          !focusDisplay && equalClick()
+          e.preventDefault()
+          equalClick()
           break
         case 'Enter':
+          e.preventDefault()
           equalClick()
           break
         default:
