@@ -65,60 +65,6 @@ export const CalcContextComponent = ({ children }) => {
         case 'Backspace':
           !focusDisplay && backspace()
           break
-        case '0':
-          !focusDisplay && opKey('0')
-          break
-        case '1':
-          !focusDisplay && opKey('1')
-          break
-        case '2':
-          !focusDisplay && opKey('2')
-          break
-        case '3':
-          !focusDisplay && opKey('3')
-          break
-        case '4':
-          !focusDisplay && opKey('4')
-          break
-        case '5':
-          !focusDisplay && opKey('5')
-          break
-        case '6':
-          !focusDisplay && opKey('6')
-          break
-        case '7':
-          !focusDisplay && opKey('7')
-          break
-        case '8':
-          !focusDisplay && opKey('8')
-          break
-        case '9':
-          !focusDisplay && opKey('9')
-          break
-        case '+':
-          !focusDisplay && opKey('+')
-          break
-        case '-':
-          !focusDisplay && opKey('-')
-          break
-        case '*':
-          !focusDisplay && opKey('*')
-          break
-        case '/':
-          !focusDisplay && opKey('/')
-          break
-        case '%':
-          !focusDisplay && opKey('%')
-          break
-        case '.':
-          !focusDisplay && opKey('.')
-          break
-        case '(':
-          !focusDisplay && opKey('(')
-          break
-        case ')':
-          !focusDisplay && opKey(')')
-          break
         case '=':
           e.preventDefault()
           equalClick()
@@ -128,6 +74,7 @@ export const CalcContextComponent = ({ children }) => {
           equalClick()
           break
         default:
+          !focusDisplay && opKey(e.key)
           break
       }
     } else {
