@@ -11,6 +11,10 @@ export const CalcContextComponent = ({ children }) => {
     setDisplay(e)
   }
 
+  useEffect(() => {
+    console.log(display)
+  }, [display])
+
   const allowedKeys = ['Backspace', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '(', ')', '+', '-', '*', '/', '%', '=', 'Enter']
 
   const [focusDisplay, setFocusDisplay] = useState(false)
@@ -24,7 +28,11 @@ export const CalcContextComponent = ({ children }) => {
   }
 
   const buttonClick = (num) => {
-    setDisplay(`${display}${num}`)
+    // focusDisplay && setDisplay(`${display}${num}`)
+
+    const keyPressEvent = new KeyboardEvent('keydown', { key: num })
+    document.dispatchEvent(keyPressEvent);
+    console.log(keyPressEvent)
   }
 
   const equalClick = () => {
@@ -41,7 +49,6 @@ export const CalcContextComponent = ({ children }) => {
       }, 1500)
     }
   }
-
 
   const clearClick = () => {
     setDisplay('')
@@ -117,7 +124,7 @@ export const CalcContextComponent = ({ children }) => {
           !focusDisplay && equalClick()
           break
         case 'Enter':
-          !focusDisplay && equalClick()
+          equalClick()
           break
         default:
           break

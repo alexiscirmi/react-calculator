@@ -10,7 +10,7 @@ function Display() {
   }
 
   return (
-    <input type='text' id='display' className='display fs-1' defaultValue={display} onChange={handleChange} onFocus={onFocusDisplay} onBlur={onBlurDisplay} />
+    <input type='text' id='display' className='display fs-1' value={display} onChange={handleChange} onFocus={onFocusDisplay} onBlur={onBlurDisplay} />
   )
 }
 
