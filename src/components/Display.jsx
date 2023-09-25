@@ -1,15 +1,16 @@
 import { useContext } from 'react'
 import { CalcContext } from './context/calcContext'
-import { Container } from 'react-bootstrap'
 
 function Display() {
 
-  const { display } = useContext(CalcContext)
+  const { display, updateDisplay, onFocusDisplay, onBlurDisplay } = useContext(CalcContext)
+
+  const handleChange = (e) => {
+    updateDisplay(e.target.value)
+  }
 
   return (
-    <Container className='display fs-1'>
-      <h1 className='mb-0'>{display}</h1>
-    </Container>
+    <input type='text' id='display' className='display fs-1' defaultValue={display} onChange={handleChange} onFocus={onFocusDisplay} onBlur={onBlurDisplay} />
   )
 }
 

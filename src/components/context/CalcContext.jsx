@@ -7,6 +7,22 @@ export const CalcContextComponent = ({ children }) => {
 
   const [display, setDisplay] = useState('')
 
+  const updateDisplay = (e) => {
+    setDisplay(e)
+  }
+
+  const allowedKeys = ['Backspace', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '(', ')', '+', '-', '*', '/', '%', '=', 'Enter']
+
+  const [focusDisplay, setFocusDisplay] = useState(false)
+
+  const onFocusDisplay = () => {
+    setFocusDisplay(true)
+  }
+
+  const onBlurDisplay = () => {
+    setFocusDisplay(false)
+  }
+
   const buttonClick = (num) => {
     setDisplay(`${display}${num}`)
   }
@@ -35,90 +51,90 @@ export const CalcContextComponent = ({ children }) => {
   // The next functions & useEffect allow users to manipulate the calculator using the keyboard
   //
 
-  const backspace = () => {
-    setDisplay(display.slice(0, -1))
-  }
+  // const backspace = () => {
+  //   setDisplay(display.slice(0, -1))
+  // }
 
-  const opKey = (op) => {
-    setDisplay(display + op)
-  }
+  // const opKey = (op) => {
+  //   setDisplay(display + op)
+  // }
 
-  const handleKeyDown = (e) => {
-    e.preventDefault()
-    switch (e.key) {
-      case 'Backspace':
-        backspace()
-        break
-      case '0':
-        opKey('0')
-        break
-      case '1':
-        opKey('1')
-        break
-      case '2':
-        opKey('2')
-        break
-      case '3':
-        opKey('3')
-        break
-      case '4':
-        opKey('4')
-        break
-      case '5':
-        opKey('5')
-        break
-      case '6':
-        opKey('6')
-        break
-      case '7':
-        opKey('7')
-        break
-      case '8':
-        opKey('8')
-        break
-      case '9':
-        opKey('9')
-        break
-      case '+':
-        opKey('+')
-        break
-      case '-':
-        opKey('-')
-        break
-      case '*':
-        opKey('*')
-        break
-      case '/':
-        opKey('/')
-        break
-      case '%':
-        opKey('%')
-        break
-      case '.':
-        opKey('.')
-        break
-      case '=':
-        equalClick()
-        break
-      case 'Enter':
-        equalClick()
-        break
-      default:
-        break
-    }
-  }
+  // const handleKeyDown = (e) => {
+  //   e.preventDefault()
+  //   switch (e.key) {
+  //     case 'Backspace':
+  //       backspace()
+  //       break
+  //     case '0':
+  //       opKey('0')
+  //       break
+  //     case '1':
+  //       opKey('1')
+  //       break
+  //     case '2':
+  //       opKey('2')
+  //       break
+  //     case '3':
+  //       opKey('3')
+  //       break
+  //     case '4':
+  //       opKey('4')
+  //       break
+  //     case '5':
+  //       opKey('5')
+  //       break
+  //     case '6':
+  //       opKey('6')
+  //       break
+  //     case '7':
+  //       opKey('7')
+  //       break
+  //     case '8':
+  //       opKey('8')
+  //       break
+  //     case '9':
+  //       opKey('9')
+  //       break
+  //     case '+':
+  //       opKey('+')
+  //       break
+  //     case '-':
+  //       opKey('-')
+  //       break
+  //     case '*':
+  //       opKey('*')
+  //       break
+  //     case '/':
+  //       opKey('/')
+  //       break
+  //     case '%':
+  //       opKey('%')
+  //       break
+  //     case '.':
+  //       opKey('.')
+  //       break
+  //     case '=':
+  //       equalClick()
+  //       break
+  //     case 'Enter':
+  //       equalClick()
+  //       break
+  //     default:
+  //       break
+  //   }
+  // }
 
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  })
+  // useEffect(() => {
+  //   document.addEventListener('keydown', handleKeyDown)
+  //   return () => document.removeEventListener('keydown', handleKeyDown)
+  // })
 
   //
   //
   //
 
   return (
-    <CalcContext.Provider value={{ display, buttonClick, equalClick, clearClick, handleKeyDown }}>
+    <CalcContext.Provider value={{ display, updateDisplay, onFocusDisplay, onBlurDisplay, buttonClick, equalClick, clearClick }}>
       {children}
     </CalcContext.Provider>
   )
