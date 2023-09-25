@@ -24,11 +24,8 @@ export const CalcContextComponent = ({ children }) => {
   }
 
   const buttonClick = (num) => {
-    // focusDisplay && setDisplay(`${display}${num}`)
-
     const keyPressEvent = new KeyboardEvent('keydown', { key: num })
     document.dispatchEvent(keyPressEvent);
-    console.log(keyPressEvent)
   }
 
   const equalClick = () => {
