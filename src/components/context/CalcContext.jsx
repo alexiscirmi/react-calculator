@@ -11,11 +11,7 @@ export const CalcContextComponent = ({ children }) => {
     setDisplay(e)
   }
 
-  useEffect(() => {
-    console.log(display)
-  }, [display])
-
-  const allowedKeys = ['Backspace', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '(', ')', '+', '-', '*', '/', '%', '=', 'Enter']
+  const allowedKeys = ['Backspace', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '(', ')', '+', '-', '*', '/', '%', '=', '.', 'Enter']
 
   const [focusDisplay, setFocusDisplay] = useState(false)
 
@@ -119,6 +115,12 @@ export const CalcContextComponent = ({ children }) => {
           break
         case '.':
           !focusDisplay && opKey('.')
+          break
+        case '(':
+          !focusDisplay && opKey('(')
+          break
+        case ')':
+          !focusDisplay && opKey(')')
           break
         case '=':
           !focusDisplay && equalClick()
