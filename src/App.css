@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'college';
+  src: url('/src/assets/fonts/college.woff2') format('woff2');
+}
+
 .title {
-  font-family: 'Atlanta College', sans-serif;
+  font-family: 'college', sans-serif;
   font-size: 48px;
   color: #003391;
 }
