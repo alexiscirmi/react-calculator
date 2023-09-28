@@ -1,7 +1,7 @@
-@font-face {
-  font-family: "college";
-  src: local("college"),
-    url('./assets/fonts/college.ttf') format("truetype");
+.title {
+  font-family: 'Atlanta College', sans-serif;
+  font-size: 48px;
+  color: #003391;
 }
 
 .calculator {
@@ -42,12 +42,6 @@
   margin-bottom: 15px;
   padding: 15px;
   text-align: center;
-}
-
-.title {
-  font-family: 'college', sans-serif;
-  font-size: 48px;
-  color: #003391;
 }
 
 @media (max-width: 575px) {
