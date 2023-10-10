@@ -3,7 +3,7 @@ import { evaluate } from "mathjs"
 
 export const CalcContext = createContext()
 
-export const CalcContextComponent = ({ children }) => {
+export const CalcProvider = ({ children }) => {
 
   const [display, setDisplay] = useState('')
 
