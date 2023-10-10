@@ -1,6 +1,6 @@
 import { Container, Col, Row } from 'react-bootstrap'
 import ButtonCustom from './ButtonCustom';
-import { CalcContext } from './context/calcContext';
+import { CalcContext } from '../context/calcContext';
 import { useContext } from 'react';
 
 function ButtonContainer() {

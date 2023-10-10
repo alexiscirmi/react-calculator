@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { CalcContext } from './context/calcContext'
+import { CalcContext } from '../context/calcContext'
 
 function Display() {
 
