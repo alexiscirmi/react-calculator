@@ -1,7 +1,7 @@
 {
   "name": "react-calculator",
   "private": true,
-  "version": "0.9.3",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -24,7 +24,6 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "vite": "^4.4.5",
-    "vite-plugin-pwa": "^0.16.5"
+    "vite": "^4.4.5"
   }
 }
